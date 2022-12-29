@@ -1,6 +1,7 @@
 setwd("~/git_repos/duolingo-percentiles//")
 
-dat <- read.table("data221219",
+#dat <- read.table("data221219",
+dat <- read.table("data221229",
                   sep=",",
                   header=T
                   )
@@ -17,6 +18,9 @@ dat$timeH <- sapply(dat$hhmm, time2num)
 dat
 plot(perc ~ timeH,
      data=dat)
+abline(v=dat$timeH, 
+       col="#FF000040",
+       lty=2)
 grid()
 lm01 <- lm(perc ~ timeH,
            data=dat)
@@ -29,5 +33,9 @@ plot(perc ~ timeH,
      data=dat,
      xlim=c(0, 24), ylim=c(0, 100))
 grid()
+abline(v=dat$timeH, 
+       col="#FF000040",
+       lty=2)
+
 abline(lm01)
 plot(lm01)
