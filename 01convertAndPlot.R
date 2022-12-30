@@ -16,8 +16,11 @@ time2num <- function(ti){
 }
 dat$timeH <- sapply(dat$hhmm, time2num)
 dat
+#png("perc.png", width=7, height=5, units="in", res=150)
 plot(perc ~ timeH,
-     data=dat)
+     data=dat,
+     xlab="Time (h)",
+     ylab="Percentile")
 abline(v=dat$timeH, 
        col="#FF000040",
        lty=2)
@@ -25,6 +28,7 @@ grid()
 lm01 <- lm(perc ~ timeH,
            data=dat)
 abline(lm01)
+#dev.off()
 # fit looks linear with these limited data, but
 summary(lm01)
 # intercept is at 125%
