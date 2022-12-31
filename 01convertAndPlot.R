@@ -1,7 +1,6 @@
 setwd("~/git_repos/duolingo-percentiles//")
 
-#dat <- read.table("data221219",
-dat <- read.table("data221229",
+dat <- read.table("data",
                   sep=",",
                   header=T
                   )
@@ -34,13 +33,4 @@ abline(lm01)
 summary(lm01)
 # intercept is at 125%
 
-plot(perc ~ timeH,
-     data=dat,
-     xlim=c(0, 24), ylim=c(0, 100))
-grid()
-abline(v=dat$timeH, 
-       col="#FF000040",
-       lty=2)
-
-abline(lm01)
 plot(lm01)
