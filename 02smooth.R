@@ -13,5 +13,7 @@ plot(x=xvals[-1],
      xlab="h",
      ylab="Slope (percent/h)"
      )
-
-
+grid()
+abline(v=dat$timeH[!is.na(dat$perc)], 
+       col="#FF000040",
+       lty=2)

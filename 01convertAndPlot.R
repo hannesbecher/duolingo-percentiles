@@ -35,3 +35,5 @@ summary(lm01)
 # intercept is at 125%
 
 plot(lm01)
+
+
