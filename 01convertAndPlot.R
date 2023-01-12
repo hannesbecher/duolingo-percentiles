@@ -28,7 +28,7 @@ abline(h=seq(0,100,by=5), col="lightgrey", lty=3)
 abline(v=seq(0,24,by=1), col="lightgrey", lty=3)
 lm01 <- lm(perc ~ timeH,
            data=dat)
-abline(lm01)
+#abline(lm01)
 #dev.off()
 # fit looks linear with these limited data, but
 summary(lm01)
