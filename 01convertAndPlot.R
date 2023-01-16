@@ -19,7 +19,8 @@ dat
 plot(perc ~ timeH,
      data=dat,
      xlab="Time (h)",
-     ylab="Percentile")
+     ylab="Percentile",
+     main="Percentile by time")
 abline(v=dat$timeH, 
        col="#FF000040",
        lty=2)
